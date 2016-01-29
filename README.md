@@ -12,7 +12,6 @@ logic(You can modify messages):
 package main
 
 import "github.com/SiroDiaz/go-hangman"
-// import "hangman-siro/go-hangman"
 import "fmt"
 import "strings"
 import "strconv"
