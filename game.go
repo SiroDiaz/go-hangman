@@ -48,6 +48,19 @@ func GetMaxTries() int {
 	return max_tries
 }
 
+func (g *game) SetWord(word string) {
+	word = strings.TrimSpace(word)
+	if len(word) == 0 {
+		panic("Empty word used")
+	}
+
+	g.completeWord = strings.ToLower(word)
+	g.userWord = make([]byte, len(word))
+	for i := 0; i < len(word); i++ {
+		g.userWord[i] = separator
+	}
+}
+
 // 
 func (g game) GetWord() string {
 	return g.completeWord
