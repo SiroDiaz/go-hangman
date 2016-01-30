@@ -18,7 +18,9 @@ import "strconv"
 
 func main() {
 	defer func () {
-		fmt.Println(recover())
+		if r := recover(); r != nil {
+			fmt.Println(r)
+		}
 	}()
 
 	game := hangman.New()
